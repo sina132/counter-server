@@ -21,14 +21,14 @@ app.get('/add',async(req,res)=>{
     const data = await database.findOne({"id":1});
     data.data+=1;
     await data.save();
-    res.send(200);
+    res.sendStatus(200);
 })
 
 app.get('/reset',async(req,res)=>{
     const data = await database.findOne({"id":1});
     data.data=0;
     await data.save();
-    res.send(200);
+    res.sendStatus(200);
 })
 
 app.get('/get',async(req,res)=>{
