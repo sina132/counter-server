@@ -33,5 +33,5 @@ app.get('/reset',async(req,res)=>{
 
 app.get('/get',async(req,res)=>{
     const data = await database.findOne({"id":1});
-    res.send(data.data);
+    res.send(`data: ${data.data}`);
 })
